@@ -1,0 +1,314 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+ul{
+  padding: 0;
+}
+
+.body-content-container{
+  margin: 0px 15px 0px 15px;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+header{
+  grid-area: header;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-and-btn-container{
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main{
+  grid-area: main;
+}
+
+footer{
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  height: 78px;
+  padding: 25px;
+  background-color: #FF4C4C;
+  color: white;
+}
+
+footer h4{
+  align-content: center;
+  margin: 25px 0px 25px 0px;
+}
+
+.icon-info {
+  margin-bottom: 25px;
+  font-size: 10px;
+}
+
+#banner-menu-icon{
+  display: none;
+}
+
+#banner-menu-icon img{
+  width: 55%;
+}
+
+.logo-container img{
+  max-width: 100%;
+}
+
+.links-list{
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+}
+
+.links-list li{
+  list-style: none;
+}
+
+footer,
+.links-list a,
+.class-card a{
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 28px;
+}
+
+.links-list a,
+.class-card a{
+   color: #FF4C4C;
+}
+
+.banner{
+  display: flex;
+  margin-bottom: 42px;
+}
+
+.banner-msg{
+  width: 30%;
+}
+
+.banner-msg h1{
+  font-size: 48px;
+}
+
+.banner-msg p{
+  font-size: 18px;
+  color: #83869A;
+}
+
+.banner-img{
+  width: 70%;
+}  
+
+.banner-img img{
+  max-width: 100%;
+  border-radius: 39px;
+}
+
+.courses-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gradient-message,
+.class-card,
+.class-card-gradient{
+  position: relative;
+  font-family: "Arial", sans-serif;
+  width: 350px;
+  height: 322px;
+  margin: 45px 35px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 15px;
+}
+
+.gradient-message{
+  display: none;
+  color: white;
+  background: linear-gradient(#FF4C4C,#A94E97);
+}
+
+.gradient-message h3{
+  font-size: 40px;
+  margin: 59px 0px 0px 52px;
+}
+
+.class-card img{
+  position: absolute;
+  left: 10px;
+  top: -25px;
+}
+
+.class-card h3{
+  font-size: 24px;
+}
+
+.class-card p{
+  font-size: 18px;
+  line-height: 28px;
+  color: #83869A;
+}
+
+.class-card a{
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.font-container{
+  padding: 48px 32px;
+}
+
+.class-card-gradient{
+  color: white;
+  background: linear-gradient(#FF4C4C,#A94E97);
+}
+
+.class-card-gradient h3{
+  font-size: 40px;
+  margin: 59px 0px 0px 52px;
+}
+
+#enter-btn{
+  width: 30%;
+  height: 50px;
+  background: linear-gradient(#FF4C4C,#A94E97);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+}
+
+.tablet{
+  display: none;
+}
+
+.phone{
+  display: none;
+}
+
+@media (max-width: 768px){
+  .tablet{
+    display: block;
+  }
+
+  .links-and-btn-container{
+    width: 65%
+  }
+
+  .links-list{
+    width: 55%;
+  }
+
+  #enter-btn{
+    width: 35%;
+  }
+
+  .banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-msg{
+    width: 65%;
+    padding: 30px;
+  }
+
+  .banner-img{
+    width: 80%;
+  }
+
+  .class-card,
+  .class-card-gradient{
+    margin: 45px 5px;
+  }
+
+  footer{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 428px){
+  .phone{
+    display: block;
+  }
+
+  #banner-menu-icon{
+    display: block;
+    width: 10%;
+    padding-top: 15px;
+    margin-right: 20px;
+  }
+
+  #banner-menu-icon img{
+    width: 100%;
+  }
+  
+  .links-and-btn-container{
+    display: none;
+  }
+
+  .banner-msg{
+    width: 80%;
+  }
+
+  .banner-msg h1{
+  font-size: 30px;
+}
+
+  .banner-msg p{
+    font-size: 16px;
+  }
+
+  .banner-img{
+    width: 95%;
+  }
+
+  .gradient-message{
+    display: block;
+    height: 98px;
+    margin: 45px 10px;
+  }
+
+  .gradient-message h3{
+    font-size: 22px;
+    margin: 20px 0px 0px 40px;
+  }
+
+  .class-card{
+    margin: 45px 0px 45px 30px;
+  }
+
+  .class-card-gradient{
+    display: none;
+  }
+
+  footer{
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer h4{
+    margin: 25px;
+  }
+}
